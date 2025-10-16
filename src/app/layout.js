@@ -22,8 +22,36 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur supports-[backdrop-filter]:bg-black/60 border-b border-white/10
+             opacity-0 animate-fadeInSlow">
+          <div className="flex justify-between items-center px-10 py-4 text-white">
+            {/* Left side */}
+            <a
+              href="/"
+              className="rounded-xl px-4 py-2 text-sm font-medium bg-purple-500/80 hover:bg-purple-600 border border-purple-600 transition"
+            >
+              Home
+            </a>
+
+            {/* Right side */}
+            <div className="flex gap-4">
+              <a
+                href="/tech"
+                className="rounded-xl px-4 py-2 text-sm font-medium bg-white/10 hover:bg-purple-500/30 border border-white/10 transition"
+              >
+                Tech Projects
+              </a>
+              <a
+                href="/film"
+                className="rounded-xl px-4 py-2 text-sm font-medium bg-white/10 hover:bg-purple-500/30 border border-white/10 transition"
+              >
+                Film Projects
+              </a>
+            </div>
+          </div>
+        </nav>
         {children}
       </body>
     </html>
   );
-}
+} 

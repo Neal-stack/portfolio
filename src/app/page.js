@@ -1,103 +1,73 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="pt-24 min-h-screen bg-gradient-to-b from-black via-slate-950 to-purple-900 text-white">
+      {/* Hero */}
+      <section className="mx-auto max-w-5xl px-6 pt-28 pb-20">
+        <div className="text-center">
+          <p className="text-sm tracking-widest text-slate-300/80">PORTFOLIO</p>
+          <h1 className="mt-3 text-4xl md:text-6xl font-bold leading-tight">
+            Neal Abraham
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-slate-300">
+            Student and developer passionate about creating meaningful technology.
+          </p>
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <a href="#contact" className="rounded-xl px-6 py-2.5 text-sm font-medium bg-white/10 backdrop-blur-md hover:bg-purple-500/20 transition shadow-md">
+              Contact
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="mx-auto max-w-5xl px-6 pb-24">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">Featured Projects</h2>
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
+          <article className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur shadow">
+            <h3 className="text-lg font-semibold">AI Legal Doc Reader</h3>
+            <p className="mt-2 text-sm text-slate-300">Flags fine print, risky clauses, and key terms in contracts and TOS.</p>
+            <div className="mt-4 flex gap-4 text-sm">
+              <a className="hover:underline" href="#">Live</a>
+              <a className="hover:underline" href="#">Repo</a>
+            </div>
+          </article>
+          <article className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur shadow">
+            <h3 className="text-lg font-semibold">Smart Resume Matcher</h3>
+            <p className="mt-2 text-sm text-slate-300">Uploads a resume and finds high fit roles using embeddings.</p>
+            <div className="mt-4 flex gap-4 text-sm">
+              <a className="hover:underline" href="#">Live</a>
+              <a className="hover:underline" href="#">Repo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* Bio Section */}
+      <section id="bio" className="mx-auto max-w-5xl px-6 py-16">
+        <div className="rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 p-10 shadow-xl">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-purple-300">About Me</h2>
+          <p className="text-slate-300 leading-relaxed">
+            I’m a computer science student with a passion for building technology that creates positive impact. Over the past few years, I’ve explored software engineering, AI, and public service through hands-on projects, research, and volunteering. I enjoy solving problems that sit at the intersection of technology and real-world needs — whether that’s developing web applications, analyzing data, or creating systems that help communities.
+          </p>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="mx-auto max-w-5xl px-6 pb-28">
+        <h2 className="text-2xl md:text-3xl font-semibold">Contact</h2>
+        <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+          <p className="text-sm text-slate-300">Reach out for collabs or questions.</p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <a className="rounded-xl px-4 py-2 text-sm font-medium bg-white/10 hover:bg-white/15 border border-white/10" href="mailto:nealmabraham@gmail.com">Email</a>
+            <a className="rounded-xl px-4 py-2 text-sm font-medium bg-white/10 hover:bg-white/15 border border-white/10" href="https://github.com/Neal-stack" target="_blank" rel="noreferrer">GitHub</a>
+            <a className="rounded-xl px-4 py-2 text-sm font-medium bg-white/10 hover:bg-white/15 border border-white/10" href="https://www.linkedin.com/in/nma19/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+
+      <footer className="pb-10 text-center text-xs text-slate-400/80">
+        © {new Date().getFullYear()} Neal Abraham
       </footer>
-    </div>
+    </main>
   );
 }
