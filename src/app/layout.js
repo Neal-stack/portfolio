@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,27 +27,27 @@ export default function RootLayout({ children }) {
              opacity-0 animate-fadeInSlow">
           <div className="flex justify-between items-center px-10 py-4 text-white">
             {/* Left side */}
-            <a
+            <Link
               href="/"
               className="rounded-xl px-4 py-2 text-sm font-medium bg-purple-500/80 hover:bg-purple-600 border border-purple-600 transition"
             >
               Home
-            </a>
+            </Link>
 
             {/* Right side */}
             <div className="flex gap-4">
-              <a
+              <Link
                 href="/tech"
                 className="rounded-xl px-4 py-2 text-sm font-medium bg-white/10 hover:bg-purple-500/30 border border-white/10 transition"
               >
                 Tech Projects
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/film"
                 className="rounded-xl px-4 py-2 text-sm font-medium bg-white/10 hover:bg-purple-500/30 border border-white/10 transition"
               >
                 Film Projects
-              </a>
+              </Link>
             </div>
           </div>
         </nav>
