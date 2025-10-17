@@ -21,26 +21,47 @@ export default function Home() {
 
       {/* Projects */}
       <section id="projects" className="mx-auto max-w-5xl px-6 pb-24">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">Featured Projects</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">
+          Featured Projects
+        </h2>
         <div className="mt-6 grid gap-6 md:grid-cols-2">
+          {/* Realtor AI */}
           <article className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur shadow">
-            <h3 className="text-lg font-semibold">AI Legal Doc Reader</h3>
-            <p className="mt-2 text-sm text-slate-300">Flags fine print, risky clauses, and key terms in contracts and TOS.</p>
+            <h3 className="text-lg font-semibold">Realtor AI</h3>
+            <p className="mt-2 text-sm text-slate-300">
+              A conversational AI tool that helps users find ideal properties by combining MLS data with LLM-based search and recommendations.
+            </p>
             <div className="mt-4 flex gap-4 text-sm">
-              <a className="hover:underline" href="#">Live</a>
-              <a className="hover:underline" href="#">Repo</a>
+              <a
+                className="hover:underline"
+                href="https://github.com/Neal-stack/realator-AI"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Repo
+              </a>
             </div>
           </article>
+          {/* F500 Stock Analysis */}
           <article className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur shadow">
-            <h3 className="text-lg font-semibold">Smart Resume Matcher</h3>
-            <p className="mt-2 text-sm text-slate-300">Uploads a resume and finds high fit roles using embeddings.</p>
+            <h3 className="text-lg font-semibold">F500 Stock Analysis</h3>
+            <p className="mt-2 text-sm text-slate-300">
+              A web dashboard analyzing Fortune 500 companies’ stock data with real-time financial APIs, visualizations, and performance insights.
+            </p>
             <div className="mt-4 flex gap-4 text-sm">
-              <a className="hover:underline" href="#">Live</a>
-              <a className="hover:underline" href="#">Repo</a>
+              <a
+                className="hover:underline"
+                href="https://github.com/Neal-stack/f500"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Repo
+              </a>
             </div>
           </article>
         </div>
       </section>
+
 
       {/* Bio Section */}
       <section id="bio" className="mx-auto max-w-5xl px-6 py-16">
