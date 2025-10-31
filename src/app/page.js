@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="pt-24 min-h-screen bg-gradient-to-b from-black via-slate-950 to-purple-900 text-white">
@@ -65,11 +67,27 @@ export default function Home() {
 
       {/* Bio Section */}
       <section id="bio" className="mx-auto max-w-5xl px-6 py-16">
-        <div className="rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 p-10 shadow-xl">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-purple-300">About Me</h2>
-          <p className="text-slate-300 leading-relaxed">
-            I’m a computer science student with a passion for building technology that creates positive impact. Over the past few years, I’ve explored software engineering, AI, and public service through hands-on projects, research, and volunteering. I enjoy solving problems that sit at the intersection of technology and real-world needs — whether that’s developing web applications, analyzing data, or creating systems that help communities.
-          </p>
+        <div className="rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 p-6 md:p-10 shadow-xl">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
+            <div className="shrink-0">
+              <div className="relative h-40 w-40 md:h-48 md:w-48 rounded-2xl overflow-hidden border border-white/10 shadow-lg">
+                <Image
+                  src="/vercel.svg"
+                  alt="Portrait"
+                  fill
+                  sizes="192px"
+                  className="object-cover object-center bg-black/20"
+                  priority
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-purple-300">About Me</h2>
+              <p className="text-slate-300 leading-relaxed">
+                I’m a computer science student with a passion for building technology that creates positive impact. Over the past few years, I’ve explored software engineering, AI, and public service through hands-on projects, research, and volunteering. I enjoy solving problems that sit at the intersection of technology and real-world needs — whether that’s developing web applications, analyzing data, or creating systems that help communities.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -43,3 +43,12 @@ body {
 .animate-fadeInSlow {
   animation: fadeInSlow 1.2s ease-out forwards;
 }
+
+/* Hide horizontal/vertical scrollbars while preserving scroll behavior */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
