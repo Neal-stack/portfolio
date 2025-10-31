@@ -27,7 +27,7 @@ export default function FilmPage() {
               Mise-en-scène project from CINE 2064. There is no audio, this project focuses soley on the visual aspect of film.
             </p>
             <a
-              href="#"
+              href="https://www.youtube.com/watch?v=nI649ohb-y0"
               className="rounded-xl px-5 py-2 text-sm font-medium bg-white/10 backdrop-blur-md hover:bg-purple-500/20 transition"
             >
               Watch Film

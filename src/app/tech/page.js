@@ -1,5 +1,3 @@
-export const dynamic = 'force-dynamic';
-
 export default function TechPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-black via-slate-950 to-purple-900 text-white pt-24">

@@ -72,7 +72,7 @@ export default function Home() {
             <div className="shrink-0">
               <div className="relative h-40 w-40 md:h-48 md:w-48 rounded-2xl overflow-hidden border border-white/10 shadow-lg">
                 <Image
-                  src="/vercel.svg"
+                  src="/profile.jpg"
                   alt="Portrait"
                   fill
                   sizes="192px"
