@@ -1,3 +1,7 @@
+import Image from "next/image";
+
+export const dynamic = 'force-dynamic';
+
 export default function TechPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-black via-slate-950 to-purple-900 text-white pt-24">
@@ -32,7 +36,7 @@ export default function TechPage() {
                 title: "F500 Stock Analysis",
                 description:
                   "A website built to help new investors get started. Goal: to have comperehsnsive analysis for fortune 500 companies based on proven strategies from investing experts.",
-                liveUrl: "",
+                liveUrl: "https://f500.vercel.app/",
                 repoUrl: "https://github.com/Neal-stack/f500",
                 tags: ["Next.js", "React", "Tailwind", "APIs"],
               },
@@ -40,9 +44,10 @@ export default function TechPage() {
                 title: "Personal Website",
                 description:
                   "My portfolio built with a modern stack. Built with Next.js, React, Tailwind CSS, and deployed on Vercel.",
-                liveUrl: "#",
-                repoUrl: "#",
+                liveUrl: "/",
+                repoUrl: "https://github.com/Neal-stack/portfolio",
                 tags: ["Next.js", "Tailwind", "Vercel"],
+                image: "/portfolio_preview.png",
               },
             ].map((project, i) => (
               <article
@@ -51,8 +56,19 @@ export default function TechPage() {
                            rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl p-5
                            flex flex-col min-h-[360px]"
               >
-                <div className="aspect-video w-full rounded-xl bg-black/40 border border-white/10 mb-4 flex items-center justify-center text-slate-500">
-                  <span className="text-sm">Preview</span>
+                <div className="aspect-video w-full rounded-xl overflow-hidden border border-white/10 mb-4 bg-black/20">
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      width={1280}
+                      height={720}
+                      className="h-full w-full object-cover"
+                      priority={false}
+                    />
+                  ) : (
+                    <div className="h-full w-full flex items-center justify-center text-slate-500 text-sm">Preview</div>
+                  )}
                 </div>
                 <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
                 <p className="text-slate-300 text-sm mb-3">{project.description}</p>
