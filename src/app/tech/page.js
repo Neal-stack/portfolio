@@ -1,6 +1,35 @@
 import Image from "next/image";
 
-export const dynamic = 'force-dynamic';
+const PROJECTS = [
+  {
+    id: "realtor-ai",
+    title: "Realtor AI",
+    description:
+      "A conversational AI tool that helps users find ideal properties by combining MLS data with LLM-based search and recommendations.",
+    liveUrl: null,
+    repoUrl: "https://github.com/Neal-stack/realator-AI",
+    tags: ["Python", "AWS SageMaker", "Hugging Face Hub"],
+  },
+  {
+    id: "f500",
+    title: "F500 Stock Analysis",
+    description:
+      "A website built to help new investors get started. Goal: to have comperehsnsive analysis for fortune 500 companies based on proven strategies from investing experts.",
+    liveUrl: "https://f500.vercel.app/",
+    repoUrl: "https://github.com/Neal-stack/f500",
+    tags: ["Next.js", "React", "Tailwind", "APIs"],
+  },
+  {
+    id: "personal-website",
+    title: "Personal Website",
+    description:
+      "My portfolio built with a modern stack. Built with Next.js, React, Tailwind CSS, and deployed on Vercel.",
+    liveUrl: "/",
+    repoUrl: "https://github.com/Neal-stack/portfolio",
+    tags: ["Next.js", "Tailwind", "Vercel"],
+    image: "/portfolio_preview.png",
+  },
+];
 
 export default function TechPage() {
   return (
@@ -18,40 +47,11 @@ export default function TechPage() {
         <h2 className="text-2xl font-semibold mb-4 text-purple-300">Projects</h2>
         <div className="relative">
           {/* Scroll Container */}
-          <div
-            className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 pr-2 scrollbar-hide"
-            style={{ scrollBehavior: "smooth" }}
-          >
+          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 pr-2 scrollbar-hide scroll-smooth">
             {/* Cards */}
-            {[
-              {
-                title: "Realtor AI",
-                description:
-                  "A conversational AI tool that helps users find ideal properties by combining MLS data with LLM-based search and recommendations.",
-                liveUrl: "",
-                repoUrl: "https://github.com/Neal-stack/realator-AI",
-                tags: ["Python", "AWS SageMaker", "Hugging Face Hub"],
-              },
-              {
-                title: "F500 Stock Analysis",
-                description:
-                  "A website built to help new investors get started. Goal: to have comperehsnsive analysis for fortune 500 companies based on proven strategies from investing experts.",
-                liveUrl: "https://f500.vercel.app/",
-                repoUrl: "https://github.com/Neal-stack/f500",
-                tags: ["Next.js", "React", "Tailwind", "APIs"],
-              },
-              {
-                title: "Personal Website",
-                description:
-                  "My portfolio built with a modern stack. Built with Next.js, React, Tailwind CSS, and deployed on Vercel.",
-                liveUrl: "/",
-                repoUrl: "https://github.com/Neal-stack/portfolio",
-                tags: ["Next.js", "Tailwind", "Vercel"],
-                image: "/portfolio_preview.png",
-              },
-            ].map((project, i) => (
+            {PROJECTS.map((project) => (
               <article
-                key={i}
+                key={project.id}
                 className="snap-start shrink-0 w-[85%] sm:w-[70%] md:w-[55%] lg:w-[40%] xl:w-[32%]
                            rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl p-5
                            flex flex-col min-h-[360px]"
@@ -72,16 +72,16 @@ export default function TechPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
                 <p className="text-slate-300 text-sm mb-3">{project.description}</p>
-                {project.tags && project.tags.length ? (
+                {project.tags && project.tags.length > 0 ? (
                   <div className="mb-4 flex flex-wrap items-center -ml-0.5">
-                    {project.tags.map((t, idx) => (
-                      <div key={`tag-${t}-${idx}`} className="flex items-center mr-0.5 mb-1">
+                    {project.tags.map((tag, tagIdx) => (
+                      <div key={`${project.id}-tag-${tag}`} className="flex items-center mr-0.5 mb-1">
                         <span
                           className="inline-flex px-1 py-0.5 rounded-full border border-purple-300/30 bg-purple-400/15 backdrop-blur-sm text-[10px] tracking-wide uppercase text-purple-100 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)]"
                         >
-                          {t}
+                          {tag}
                         </span>
-                        {idx < project.tags.length - 1 ? (
+                        {tagIdx < project.tags.length - 1 ? (
                           <span className="ml-1 mr-0.5 text-purple-300/80 select-none text-[10px] leading-none self-center" aria-hidden>
                             •
                           </span>

@@ -24,7 +24,7 @@ export default function FilmPage() {
               ></iframe>
             </div>
             <p className="text-slate-300 leading-relaxed mb-6">
-              Mise-en-scène project from CINE 2064. There is no audio, this project focuses soley on the visual aspect of film.
+              Mise-en-scène project from CINE 2064. There is no audio, this project focuses solely on the visual aspect of film.
             </p>
             <a
               href="https://www.youtube.com/watch?v=nI649ohb-y0"
