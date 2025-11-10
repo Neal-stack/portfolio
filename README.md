@@ -3,7 +3,7 @@
 A modern portfolio built with the Next.js App Router showcasing tech and film projects, with a clean, glassmorphism-inspired UI.
 
 ### Features
-- **Home**: Hero, Featured Projects, About Me, Contact links.
+- **Home**: Featured Projects, About Me, Contact links.
 - **Tech**: Scrollable project cards with descriptions, per-card tool tags, and Live/Repo links.
 - **Film**: Featured video embed and placeholder grid for future films.
 - **Responsive UI**: Tailwind CSS, subtle gradients, and glass effects.
