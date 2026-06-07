@@ -2,6 +2,16 @@ import Image from "next/image";
 
 const PROJECTS = [
   {
+    id: "fridge-ai",
+    title: "Fridge AI",
+    description:
+      "A React app that helps users manage their fridge and discover recipes. Integrates Food Facts, Spoonacular, Gemini, and Supabase APIs with user sign-in. Currently in beta testing.",
+    liveUrl: "https://fridge-ai-eta.vercel.app/",
+    repoUrl: null,
+    tags: ["React", "APIs", "Gemini", "Supabase"],
+    image: "/food_ai.png",
+  },
+  {
     id: "realtor-ai",
     title: "Realtor AI",
     description:
@@ -42,18 +52,14 @@ export default function TechPage() {
         </p>
       </section>
 
-      {/* Horizontally Scrollable Projects */}
-      <section id="projects" className="mx-auto max-w-6xl px-6 pb-6">
+      {/* Projects */}
+      <section id="projects" className="mx-auto max-w-6xl px-6 pb-16">
         <h2 className="text-2xl font-semibold mb-4 text-purple-300">Projects</h2>
-        <div className="relative">
-          {/* Scroll Container */}
-          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 pr-2 scrollbar-hide scroll-smooth">
-            {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {PROJECTS.map((project) => (
               <article
                 key={project.id}
-                className="snap-start shrink-0 w-[85%] sm:w-[70%] md:w-[55%] lg:w-[40%] xl:w-[32%]
-                           rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl p-5
+                className="w-full rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl p-5
                            flex flex-col min-h-[360px]"
               >
                 <div className="aspect-video w-full rounded-xl overflow-hidden border border-white/10 mb-4 bg-black/20">
@@ -114,7 +120,6 @@ export default function TechPage() {
                 </div>
               </article>
             ))}
-          </div>
         </div>
       </section>
 
