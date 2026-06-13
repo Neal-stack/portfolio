@@ -30,6 +30,16 @@ const PROJECTS = [
     tags: ["Next.js", "React", "Tailwind", "APIs"],
   },
   {
+    id: "loanlens",
+    title: "LoanLens",
+    description:
+      "A RAG chatbot for mortgage document analysis. Upload PDFs, ask questions in natural language, and get grounded answers with source citations and confidence scores — powered by open-source models.",
+    liveUrl: null,
+    repoUrl: "https://github.com/Neal-stack/LoanLens",
+    tags: ["Python", "RAG", "FAISS", "Gradio"],
+    image: "/LoanLensPreview.png",
+  },
+  {
     id: "personal-website",
     title: "Personal Website",
     description:
