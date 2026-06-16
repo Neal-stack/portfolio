@@ -21,6 +21,16 @@ const PROJECTS = [
     tags: ["Python", "AWS SageMaker", "Hugging Face Hub"],
   },
   {
+    id: "parlay",
+    title: "Parlay",
+    description:
+      "A prediction market app that generates sports parlays from an independent win-probability model. Compares model edge to betting lines with risk-aware slips, bankroll tracking, and Gemini-powered research.",
+    liveUrl: "https://prediction-sports-parlay.vercel.app/",
+    repoUrl: "https://github.com/Neal-stack/prediction-sports-parlay",
+    tags: ["Next.js", "FastAPI", "Gemini", "Supabase"],
+    image: "/parlayPreview.png",
+  },
+  {
     id: "f500",
     title: "F500 Stock Analysis",
     description:

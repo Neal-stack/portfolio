@@ -44,20 +44,20 @@ export default function Home() {
               </a>
             </div>
           </article>
-          {/* F500 Stock Analysis */}
+          {/* Fridge AI */}
           <article className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur shadow">
-            <h3 className="text-lg font-semibold">F500 Stock Analysis</h3>
+            <h3 className="text-lg font-semibold">Fridge AI</h3>
             <p className="mt-2 text-sm text-slate-300">
-              A web dashboard analyzing Fortune 500 companies’ stock data with real-time financial APIs, visualizations, and performance insights.
+              A React app that helps users manage their fridge and discover recipes. Integrates Food Facts, Spoonacular, Gemini, and Supabase APIs with user sign-in. Currently in beta testing.
             </p>
             <div className="mt-4 flex gap-4 text-sm">
               <a
                 className="hover:underline"
-                href="https://github.com/Neal-stack/f500"
+                href="https://fridge-ai-eta.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
-                Repo
+                Live
               </a>
             </div>
           </article>
