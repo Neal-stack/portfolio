@@ -3,7 +3,7 @@ import Image from "next/image";
 const PROJECTS = [
   {
     id: "fridge-ai",
-    title: "Fridge AI",
+    title: "Ness",
     description:
       "A React app that helps users manage their fridge and discover recipes. Integrates Food Facts, Spoonacular, Gemini, and Supabase APIs with user sign-in. Currently in beta testing.",
     liveUrl: "https://fridge-ai-eta.vercel.app/",

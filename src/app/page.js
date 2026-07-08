@@ -46,7 +46,7 @@ export default function Home() {
           </article>
           {/* Fridge AI */}
           <article className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur shadow">
-            <h3 className="text-lg font-semibold">Fridge AI</h3>
+            <h3 className="text-lg font-semibold">Ness</h3>
             <p className="mt-2 text-sm text-slate-300">
               A React app that helps users manage their fridge and discover recipes. Integrates Food Facts, Spoonacular, Gemini, and Supabase APIs with user sign-in. Currently in beta testing.
             </p>
