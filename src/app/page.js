@@ -53,7 +53,7 @@ export default function Home() {
             <div className="mt-4 flex gap-4 text-sm">
               <a
                 className="hover:underline"
-                href="https://fridge-ai-eta.vercel.app/"
+                href="https://fness.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
